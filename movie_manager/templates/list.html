@@ -5,11 +5,7 @@
     <h2>Title:{{i.title |upper}}</h5>
     <h5>Year:{{i.year}}</h5>
     <h5>Author:{{i.author|default:'no data available'}}</h5>
-    {% if  i.success %}
-    <p> passed</p>
-    {% else %}
-    <p> failed</p>
-    {% endif %}
+    
     {% endfor %}
      {% include 'menu.html' %}
 
