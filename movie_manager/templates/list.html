@@ -1,2 +1,15 @@
-<h1>List Movies</h1>
-{% include 'menu.html' %}
+
+ 
+ <h3>MOVIE DETAILS</h3>
+    {% for  i in movies %}
+    <h2>Title:{{i.title |upper}}</h5>
+    <h5>Year:{{i.year}}</h5>
+    <h5>Author:{{i.author|default:'no data available'}}</h5>
+    {% if  i.success %}
+    <p> passed</p>
+    {% else %}
+    <p> failed</p>
+    {% endif %}
+    {% endfor %}
+     {% include 'menu.html' %}
+
